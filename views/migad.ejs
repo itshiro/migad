@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<body>
+  <h1><%= title %></h1>
+  <%= msg %>
+  <form method="post" action="/form">
+    <table>
+      <tr>
+        <td align="right">
+          appication:
+        </td>
+        <td>
+          <input type="text" name="application" value="<%= input %>">
+        </td>
+      </tr>
+      <tr>
+        <td align="right">database:</td>
+        <td>
+          <input type="text" name="db" value="<%= input %>">
+        </td>
+      </tr>
+        <td align="right">web server/app server:</td>
+        <td>
+          <input type="text" name="was" value="<%= input %>">
+        </td>
+      </tr>
+      <tr>
+        <td align="right">vm or phsical:</td>
+        <td>
+          <input type="text" name="vm or physical" value="<%= input %>">
+        </td>
+      </tr>
+      <tr>
+        <td align="right">server vender:</td>
+        <td>
+          <input type="text" name="server vender" value="<%= input %>">
+        </td>
+      </tr>
+      <tr>
+        <td align="right">server model:</td>
+        <td>
+          <input type="text" name="server model" value="<%= input %>">
+        </td>
+      </tr>
+        <td align="right"># of CPUCore:</td>
+        <td>
+          <input type="text" name="#CPUCore" value="<%= input %>">
+        </td>
+      </tr>
+    </table>
+        <input type="submit">
+      </p>
+  </form>
+  <table>
+    <% for(var key in data){ %>
+      <tr><td><%= key %></td>
+      <% for (var key2 in data[key]) { %>
+        <td><%= data[key][key2] %></td>
+      <% } %>
+      </tr>
+    <% } %>
+  </table>
+
+</body>
